@@ -11,7 +11,7 @@ The Medical Expidenture Panel Survey is a nationally represented survey of the U
 ---
 
 ### **MODELING:**
-<u>*Using the variables. Veronica is just thinking through the process here lol; will clean up later*</u>
+*Using the variables. Veronica is just thinking through the process here lol; will clean up later*
 
 OUTPUT VARIABLE[S]
 
@@ -23,9 +23,31 @@ We are predicting total healthcare spending in 2024— the TOTEXPY2 column from 
 
 INPUT VARIABLE[S]
 
-Important rule: keep any 2024 variables out of the predictors! You'll have to cross check with the data dictionary to make sure you're following this. Also "_y2" sometimes indicates 2024.
+> [!] Rule: keep any 2024 variables out of the predictors! You'll have to cross check with the data dictionary to make sure you're following this. Also "_y2" sometimes indicates 2024.
 
-We are considering including the 2023 expenses as a predictor (tot_exp_y1)— obviously. But an interesting thing to deep dive into would be *How well can we predict costs without prior spending data?*. 
+We are considering including the 2023 expenses as a predictor (tot_exp_y1)— obviously. But an interesting thing to deep dive into would be *How well can we predict costs without prior spending data?*. Let's challenge ourselves to build a model without the 2023 expenses perhaps?
+
+You'll also notice a bunch of ccsr_LETTERSANDNUMBERS columns too— those are indicators for if that person has a certain disease. You can look up "ccsr CIR000" and "Diseases of the circulatory system, generic or masked." for instance. Let's use these disease presence columns as predictors as well. 
+
+The rest of the columns should be self explanatory maybe— use the "Variables Selected from main_df" codechunk in costs_conditions_dataset_setup.ipynb** to find out the original names (from the MEPS data dictionary) if any of them confuse you.
+
+As for where we should take our project, here's some next steps suggested by Claude. I was thinking of setting up individual ipynb files for each of you guys where you can each have an individual focus. 
+
+Suggested project structure
+
+EDA: look at the outcome distribution, how concentrated spending is, and the correlations.
+
+Baseline: “next year = last year” (tot_exp_y1 alone).
+
+Models: linear regression, then Lasso (to select variables), then a tree model (random forest or gradient boosting).
+
+Block comparison: add the predictor blocks one at a time and see which ones raise test R².
+
+Classification: a logistic regression and a tree model for high_cost_y2.
+
+Interpretation: the coefficients Lasso keeps, the tree model’s feature importances, and what all of it says about what drives future costs.
+
+_Will resume discussion with team here._
 
 ---
 
