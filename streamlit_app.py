@@ -116,9 +116,9 @@ COLORS = {
         "neutral": "#A3A3A3",  #not clearly different from overall
         "muted": "#B7BDC7",  #blocks that are not highlighted
         "ink": "#262730",  #reference lines, error bars, annotations
-        "band_ramp": ["#72A8B6", "#56909F", "#3D7886", "#2B616D", "#224750"],  # $0 -> top 20%
+        "band_ramp": ["#72A8B6", "#56909F", "#3D7886", "#2B616D", "#224750"],  
         "heat_scale": [[0.0, "#D5E5E8"], [1.0, "#224750"]],  
-        "table_header": "#D5E5E8",  #light teal, so the dark header text is easy to read
+        "table_header": "#D5E5E8",  
         "table_header_text": "#262730",
         "table_cell": "#F0F2F6",
         "table_text": "#262730",
