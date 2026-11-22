@@ -3,8 +3,8 @@
 Predicting the Price of Health Dashboard
 
 HOW TO RUN
-    conda activate env            #any environment with pandas, numpy and plotly
-    pip install streamlit            #one time only
+    conda activate [env]           #replace [env] with any environment with pandas, numpy and plotly
+    pip install streamlit            #if you do not have streamlit, install it once
     streamlit run streamlit_app.py   #run this from the repo folder
 
 WHERE TO CHANGE THINGS  (search for the numbered banners, ex: "[1] VARIABLE")
