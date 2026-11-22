@@ -1,5 +1,4 @@
-# Packages needed to run the dashboard:  pip install -r requirements.txt
-# (the ds6021 conda env already has pandas, numpy and plotly; it only needs streamlit)
+#Packages needed to run the dashboard:  pip install -r requirements.txt
 streamlit>=1.67
 pandas>=2.2
 numpy>=1.26
